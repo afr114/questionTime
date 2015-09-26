@@ -1,0 +1,4 @@
+<li>
+  {{#link-to 'question' question.id}}{{question.title}} by {{question.author}}{{/link-to}}
+  <button {{action 'delete' question}}>Delete</button>
+</li>

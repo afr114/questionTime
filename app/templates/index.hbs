@@ -1,0 +1,7 @@
+<ul>
+{{#each model.questions as |question|}}
+  {{question-canvas question=question destroyQuestion="destroyQuestion" updateQuestion="updateQuestion"}}
+{{/each}}
+</ul>
+
+{{new-question saveQuestion="saveQuestion"}}
