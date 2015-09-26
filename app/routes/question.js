@@ -28,8 +28,22 @@ export default Ember.Route.extend({
     },
 
     destroyAnswer(answer) {
+    if (confirm('Are you sure you want to delete this Answer?')) {
     answer.destroyRecord();
     this.transitionTo('question');
     }
+  },
+
+    updateAnswer(answer, params) {
+    Object.keys(params).forEach(function(key) {
+      if(params[key]!==undefined) {
+        answer.set(key,params[key]);
+      }
+    });
+    answer.save();
+    this.transitionTo('question');
+  },
+
+
   }
 });

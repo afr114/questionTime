@@ -1,0 +1,23 @@
+{{#if updateAnswerForm}}
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="content">Answer</label>
+          {{textarea class="form-control" rows="2" value=content id="content"}}
+        </div>
+
+        <div class="form-group">
+          <label for="username">Name</label>
+          {{input class="form-control" value=username id="username"}}
+        </div>
+
+        <div class="form-group">
+        <button {{action 'updateAnswer' answer}}>Submit</button>
+        </div>
+
+      </form>
+       <button {{action 'closeUpdateAnswerForm'}}>Nah, Forget Aswering</button>
+    </div>
+{{else}}
+        <button {{action 'showUpdateAnswerForm'}}>Update Answer</button>
+{{/if}}
