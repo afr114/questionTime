@@ -1,7 +1,7 @@
-<ul>
+<div class="homepage">
 {{#each model.questions as |question|}}
   {{question-canvas question=question destroyQuestion="destroyQuestion" updateQuestion="updateQuestion"}}
 {{/each}}
-</ul>
+</div>
 
 {{new-question saveQuestion="saveQuestion"}}

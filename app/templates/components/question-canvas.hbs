@@ -1,4 +1,5 @@
-<li>
-  {{#link-to 'question' question.id}}{{question.title}}{{/link-to}} by {{question.author}}
-  <button {{action 'delete' question}}>Delete</button>
-</li>
+
+  <div class="row">
+    <div class="nine columns">{{#link-to 'question' question.id}}{{question.title}}{{/link-to}} by {{question.author}}</div>
+    <div class="three columns"><button {{action 'delete' question}}>Delete</button></div>
+  </div>

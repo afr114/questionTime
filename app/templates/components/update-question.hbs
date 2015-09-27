@@ -1,21 +1,20 @@
 {{#if updateQuestionInfo}}
 
       <form>
+        <div class="row">
+          <label for="title">Title</label>
+          {{input class="u-full-width" value=title id="title"}}
+        </div>
 
-        <label for="title">Title</label>
-          {{input value=title id="title"}}
+        <div class="row">
+          <label for="note">Note</label>
+          {{textarea class="u-full-width" rows="2" value=note id="note"}}
+        </div>
 
-
-
+        <div class="row">
           <label for="author">Author</label>
           {{input value=author id="author"}}
-
-
-
-          <label for="note">Note</label>
-          {{textarea rows="2" value=note id="note"}}
-
-
+        </div>
 
         <button {{action 'update' question}}>Update</button>
 
