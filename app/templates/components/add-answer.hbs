@@ -1,23 +1,26 @@
 {{#if addNewAnswer}}
     <div>
-      <form>
-        <div class="form-group">
+      <form class="pure-form">
+        <fieldset>
+        <div class="pure-control-group">
           <label for="content">Answer</label>
-          {{textarea class="form-control" rows="2" value=content id="content"}}
+          {{textarea class="pure-input-1-3" rows="2" value=content id="content"}}
         </div>
 
-        <div class="form-group">
+      <div class="pure-control-group">
           <label for="username">Name</label>
-          {{input class="form-control" value=username id="username"}}
+          {{input class="pure-input-1-3" value=username id="username"}}
         </div>
 
-        <div class="form-group">
-        <button {{action 'saveAnswer'}}>Submit</button>
+        <div class="pure-control-group">
+        <button class="pure-button" {{action 'saveAnswer'}}>Submit</button>
         </div>
-
+      </fieldset>
       </form>
-       <button {{action 'closeAnswerForm'}}>Nah, Forget Aswering</button>
-    </div>
+      <div class="pure-control-group">
+       <button class="pure-button" {{action 'closeAnswerForm'}}>Nah, Forget Aswering</button>
+     </div>
+     </div>
 {{else}}
-        <button {{action 'showAnswerForm'}}>Add Answer</button>
+        <button  class="pure-button"{{action 'showAnswerForm'}}>Add Answer</button>
 {{/if}}

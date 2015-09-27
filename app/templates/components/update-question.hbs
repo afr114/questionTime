@@ -1,27 +1,27 @@
 {{#if updateQuestionInfo}}
-    <div>
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          {{input value=title id="title"}}
-        </div>
 
-        <div class="form-group">
+      <form>
+
+        <label for="title">Title</label>
+          {{input value=title id="title"}}
+
+
+
           <label for="author">Author</label>
           {{input value=author id="author"}}
-        </div>
 
-        <div class="form-group">
+
+
           <label for="note">Note</label>
-          {{textarea class="form-control" rows="2" value=note id="note"}}
-        </div>
-        <div class="form-group">
+          {{textarea rows="2" value=note id="note"}}
+
+
+
         <button {{action 'update' question}}>Update</button>
-        </div>
 
       </form>
-       <button  {{action 'closeUpdateQuestionForm'}}>Nah, Forget Updating</button>
-    </div>
+       <button {{action 'closeUpdateQuestionForm'}}>Nah, Forget Updating</button>
+
 {{else}}
-        <button  {{action 'showUpdateQuestionForm'}}>Update Question</button>
+        <button {{action 'showUpdateQuestionForm'}}>Update Question</button>
 {{/if}}

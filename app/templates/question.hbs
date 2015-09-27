@@ -8,7 +8,7 @@
   {{#each model.answers as |answer|}}
 <li>{{answer.content}} by {{answer.username}}</li>
   {{update-answer answer=answer updateAnswer="updateAnswer"}}
-  <button {{action 'destroyAnswer' answer}}>Delete</button>
+  <button class="pure-button" {{action 'destroyAnswer' answer}}>Delete</button>
   {{/each}}
 </ul>
 
