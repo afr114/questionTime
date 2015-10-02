@@ -6,7 +6,7 @@
 <h3>Answers</h3>
 <ol>
   {{#each model.answers as |answer|}}
-<li>{{answer.content}} by {{answer.username}}</li>
+<li>{{answer.content}} by {{answer.username}} <br> Submitted {{format-date answer.date_added}}</li>
   {{update-answer answer=answer updateAnswer="updateAnswer"}}
   <button {{action 'destroyAnswer' answer}}>Delete</button>
   {{/each}}

@@ -14,7 +14,8 @@ actions: {
     var params = {
       content: this.get('content'),
       username: this.get('username'),
-      question: this.get('question')
+      question: this.get('question'),
+      date_added: Date.now()
     };
   this.sendAction('saveAnswer', params);
   this.set('addNewAnswer', false);

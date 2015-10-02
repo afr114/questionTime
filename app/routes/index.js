@@ -16,8 +16,13 @@ export default Ember.Route.extend({
     },
 
     destroyQuestion(question) {
+      if (confirm('Are you sure you want to delete this vendor')) {
+      question.get('answers').forEach(function(answer) {
+        answer.destroyRecord();
+      });
       question.destroyRecord();
       this.transitionTo('index');
+      }
     }
   }
 });
